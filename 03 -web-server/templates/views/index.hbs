@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Web Server || Weather</title>
+  </head>
+  <body>
+    <div class="main-content">
+      {{>header}}
+      <p>Use this site to get your weather</p>
+      <form>
+        <input placeholder="enter your location">
+        <button>search</button>
+      </form>
+      <p id="errorMessage"></p>
+      <p id="weatherMessage" ></p>
+    </div>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+  </body>
+</html>
