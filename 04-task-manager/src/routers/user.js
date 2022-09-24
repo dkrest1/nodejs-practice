@@ -122,7 +122,7 @@ const upload = multer({
 // create endpoint for uploading images
 router.post("/users/me/avatar", auth, upload.single("avatar"), async (req, res) => {
     // code to use sharp to resize the imgage
-    const buffer = await sharp(req.file.buffer).resize({ width: 250, height: 259 }).png().toBuffer()
+    const buffer = await sharp(req.file.buffer).resize({ width: 250, height: 259 }).jpeg().toBuffer()
     req.user.avatar = buffer
 
     // req.user.avatar = req.file.buffer
